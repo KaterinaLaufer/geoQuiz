@@ -2,9 +2,11 @@ package com.example.geoquiz
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import kotlin.math.floor
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,20 +23,20 @@ class MainActivity : AppCompatActivity() {
         trueButton = findViewById(R.id.true_button)
         falseButton = findViewById(R.id.false_button)
 
-        trueButton.setOnClickListener{ view: View ->
-            Toast.makeText(
-                this, //MainActivity
-                R.string.correct_toast, //Строка, которую надо отобразить
-                Toast.LENGTH_SHORT) //как долго отображается уведомление
-                .show()
+        trueButton.setOnClickListener { view: View ->
+            val toastText = R.string.correct_toast
+            val toastDuration = Toast.LENGTH_SHORT //Время показа сообщения
+            val toast = Toast.makeText(this, toastText, toastDuration)
+            toast.setGravity(Gravity.TOP, 0, 0)//Работает не во всех сборках
+            toast.show()
         }
 
-        falseButton.setOnClickListener{view: View->
-            Toast.makeText(
-                this,
-                R.string.incorrect_toast,
-                Toast.LENGTH_SHORT)
-                .show()
+        falseButton.setOnClickListener { view: View ->
+            val toastText = R.string.incorrect_toast
+            val toastDuration = Toast.LENGTH_SHORT
+            val toast = Toast.makeText(this, toastText, toastDuration)
+            toast.setGravity(Gravity.TOP,0,0)
+            toast.show()
         }
     }
 }
