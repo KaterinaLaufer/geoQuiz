@@ -27,15 +27,15 @@ class MainActivity : AppCompatActivity() {
             val toastText = R.string.correct_toast
             val toastDuration = Toast.LENGTH_SHORT //Время показа сообщения
             val toast = Toast.makeText(this, toastText, toastDuration)
-            toast.setGravity(Gravity.TOP, 0, 0)//Работает не во всех сборках
+            toast.setGravity(Gravity.TOP, 0, 0) //Работает не во всех сборках
             toast.show()
         }
 
         falseButton.setOnClickListener { view: View ->
             val toastText = R.string.incorrect_toast
-            val toastDuration = Toast.LENGTH_SHORT
+            val toastDuration = Toast.LENGTH_SHORT//Время показа сообщения
             val toast = Toast.makeText(this, toastText, toastDuration)
-            toast.setGravity(Gravity.TOP,0,0)
+            toast.setGravity(Gravity.TOP,0,0) //Работает не во всех сборках
             toast.show()
         }
     }
