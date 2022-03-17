@@ -43,19 +43,11 @@ class MainActivity : AppCompatActivity() {
         questionTextView = findViewById(R.id.question_text_view)
 
         trueButton.setOnClickListener { view: View ->
-            val toastText = R.string.correct_toast
-            val toastDuration = Toast.LENGTH_SHORT //Время показа сообщения
-            val toast = Toast.makeText(this, toastText, toastDuration)
-            toast.setGravity(Gravity.TOP, 0, 0) //Работает не во всех сборках
-            toast.show()
+            checkAnswer(true)
         }
 
         falseButton.setOnClickListener { view: View ->
-            val toastText = R.string.incorrect_toast
-            val toastDuration = Toast.LENGTH_SHORT//Время показа сообщения
-            val toast = Toast.makeText(this, toastText, toastDuration)
-            toast.setGravity(Gravity.TOP, 0, 0) //Работает не во всех сборках
-            toast.show()
+            checkAnswer(false)
         }
 
         nextButton.setOnClickListener { view: View ->
@@ -64,9 +56,25 @@ class MainActivity : AppCompatActivity() {
         }
         updateQuestion()
     }
+
     //Функция обновления вопроса
     private fun updateQuestion() {
         val questionTextResId = questionBank[currentIndex].textResId
         questionTextView.setText(questionTextResId)
+    }
+
+    //Функция проверки ответов
+    private fun checkAnswer(userAnswer: Boolean) {
+        val correctAnswer = questionBank[currentIndex].answer
+        val messageResId = if (userAnswer == correctAnswer) {
+            R.string.correct_toast
+        } else {
+            R.string.incorrect_toast
+        }
+        val toastText = R.string.correct_toast
+        val toastDuration = Toast.LENGTH_SHORT //Время показа сообщения
+        val toast = Toast.makeText(this, messageResId, toastDuration)
+        toast.setGravity(Gravity.TOP, 0, 0) //Работает не во всех сборках
+        toast.show()
     }
 }
