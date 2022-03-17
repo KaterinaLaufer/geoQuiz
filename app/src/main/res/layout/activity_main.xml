@@ -5,16 +5,20 @@ wrap_content - размеры представления определяютс�
 -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical">
     <!-- android:orientation="vertical" Ж:как выстраиваются потомки (вертикально)-->
     <TextView
+        android:id="@+id/question_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:gravity="center"
         android:padding="24dp"
-        android:text="@string/question_text"/>
+        tools:text="@string/question_1"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -26,6 +30,7 @@ wrap_content - размеры представления определяютс�
             android:id="@+id/true_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
             android:text="@string/true_button"/>
 
         <Button
@@ -33,6 +38,12 @@ wrap_content - размеры представления определяютс�
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/false_button"/>
-
     </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="100dp"
+        android:id="@+id/next_button"
+        android:text="@string/next_button"/>
+
 </LinearLayout>
