@@ -4,6 +4,7 @@
     <string name="true_button">Верю</string>
     <string name="false_button">Не верю</string>
     <string name="next_button">Дальше</string>
+    <string name="back_button">Назад</string>
 
     <string name="correct_toast">Верно!</string>
     <string name="incorrect_toast">Ты лошара:(</string>
