@@ -1,20 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
 match_parent - размеры представления определяются размерами родителя
 wrap_content - размеры представления определяются размерами содержимого
 -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical">
     <!-- android:orientation="vertical" Ж:как выстраиваются потомки (вертикально)-->
     <TextView
+        android:id="@+id/question_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:padding="24dp"
-        android:text="@string/question_text"/>
+        android:textSize="18dp"
+        tools:text="@string/question_1" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -26,13 +28,34 @@ wrap_content - размеры представления определяютс�
             android:id="@+id/true_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/true_button"/>
+            android:layout_marginRight="10dp"
+            android:width="130dp"
+            android:text="@string/true_button" />
 
         <Button
             android:id="@+id/false_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/false_button"/>
+            android:width="130dp"
+            android:text="@string/false_button" />
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Кнопка Назад"
+            android:id="@+id/back_button"
+            android:src="@drawable/arrow_left"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Кнопка Вперед"
+            android:id="@+id/next_button"
+            android:src="@drawable/arrow_right"/>
     </LinearLayout>
 </LinearLayout>

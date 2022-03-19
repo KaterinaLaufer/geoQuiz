@@ -1,10 +1,23 @@
 <resources>
     <string name="app_name">GeoQuiz</string>
 
-    <string name="question_text">Снусмумрик относится к подвиду парнокопытных?</string>
-    <string name="true_button">TRUE</string>
-    <string name="false_button">FALSE</string>
+    <string name="true_button">Верю</string>
+    <string name="false_button">Не верю</string>
+    <string name="next_button">Дальше</string>
+    <string name="back_button">Назад</string>
 
     <string name="correct_toast">Верно!</string>
     <string name="incorrect_toast">Ты лошара:(</string>
+
+    <string name="question_1">Змеи — глухие существа</string>
+    <string name="question_2">Гглаза слепня состоят из тысяч мельчайших отдельных глазков</string>
+    <string name="question_3">У совы одно ухо больше другого</string>
+    <string name="question_4">Родина тюльпана — Голландия</string>
+    <string name="question_5">Было время, когда в оперу ходили со своим стулом</string>
+    <string name="question_6">Быков раздражает красный цвет</string>
+    <string name="question_7">Бриллианты можно сжечь</string>
+    <string name="question_8">Верблюды запасают воду в своих горбах</string>
+    <string name="question_9">Насекомые обладают самыми разнообразными голосами</string>
+    <string name="question_10">Утонуть можно не только в воде, но и на суше</string>
+
 </resources>
