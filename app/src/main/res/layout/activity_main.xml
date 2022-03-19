@@ -45,23 +45,17 @@ wrap_content - размеры представления определяютс�
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Кнопка Назад"
             android:id="@+id/back_button"
+            android:src="@drawable/arrow_left"/>
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/arrow_left"
-            android:width="130dp"
-            android:layout_marginRight="10dp"
-            android:drawablePadding="4dp"
-            android:text="@string/back_button" />
-
-        <Button
+            android:contentDescription="Кнопка Вперед"
             android:id="@+id/next_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:width="130dp"
-            android:drawableEnd="@drawable/arrow_right"
-            android:drawablePadding="4dp"
-            android:text="@string/next_button" />
+            android:src="@drawable/arrow_right"/>
     </LinearLayout>
 </LinearLayout>
