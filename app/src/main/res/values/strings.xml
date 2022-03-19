@@ -9,15 +9,15 @@
     <string name="correct_toast">Верно!</string>
     <string name="incorrect_toast">Ты лошара:(</string>
 
-    <string name="question_1">Змеи — глухие существа</string>
-    <string name="question_2">Гглаза слепня состоят из тысяч мельчайших отдельных глазков</string>
-    <string name="question_3">У совы одно ухо больше другого</string>
-    <string name="question_4">Родина тюльпана — Голландия</string>
-    <string name="question_5">Было время, когда в оперу ходили со своим стулом</string>
-    <string name="question_6">Быков раздражает красный цвет</string>
-    <string name="question_7">Бриллианты можно сжечь</string>
-    <string name="question_8">Верблюды запасают воду в своих горбах</string>
-    <string name="question_9">Насекомые обладают самыми разнообразными голосами</string>
-    <string name="question_10">Утонуть можно не только в воде, но и на суше</string>
+    <string name="question_1">1. Змеи — глухие существа</string>
+    <string name="question_2">2. Глаза слепня состоят из тысяч мельчайших отдельных глазков</string>
+    <string name="question_3">3. У совы одно ухо больше другого</string>
+    <string name="question_4">4. Родина тюльпана — Голландия</string>
+    <string name="question_5">5. Было время, когда в оперу ходили со своим стулом</string>
+    <string name="question_6">6. Быков раздражает красный цвет</string>
+    <string name="question_7">7. Бриллианты можно сжечь</string>
+    <string name="question_8">8. Верблюды запасают воду в своих горбах</string>
+    <string name="question_9">9. Насекомые обладают самыми разнообразными голосами</string>
+    <string name="question_10">10. Утонуть можно не только в воде, но и на суше</string>
 
 </resources>
