@@ -1,34 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-match_parent - размеры представления определяются размерами родителя
-wrap_content - размеры представления определяются размерами содержимого
--->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
-    <!-- android:orientation="vertical" Ж:как выстраиваются потомки (вертикально)-->
+    android:layout_height="match_parent">
+
     <TextView
         android:id="@+id/question_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_gravity="center_horizontal"
         android:padding="24dp"
         android:textSize="18dp"
         tools:text="@string/question_1" />
+
     <TextView
         android:id="@+id/annotation_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_gravity="center_horizontal"
         android:padding="24dp"
-        android:textSize="18dp"/>
+        android:textSize="18dp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_gravity="center_vertical|center_horizontal">
         <!-- android:orientation="horizontal" Ж:как выстраиваются потомки (горизонтально)-->
 
         <Button
@@ -50,28 +46,39 @@ wrap_content - размеры представления определяютс�
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
         android:orientation="horizontal">
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="Кнопка Назад"
             android:id="@+id/back_button"
-            android:src="@drawable/arrow_left"/>
-        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="Кнопка Вперед"
-            android:id="@+id/next_button"
-            android:src="@drawable/arrow_right"/>
+            android:layout_gravity="left"
+            android:contentDescription="Кнопка Назад"
+            android:src="@drawable/arrow_left" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:contentDescription="Кнопка Вперед"
+            android:src="@drawable/arrow_right" />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/result_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_gravity="bottom|center_horizontal"
         android:padding="24dp"
-        android:textFontWeight="@integer/material_motion_duration_long_1"
-        android:textSize="30dp" />
+        android:textSize="18dp" />
 
-</LinearLayout>
+</FrameLayout>
